@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Type Faster</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+
+    <script type="text/x-handlebars" data-template-name="countdown">
+      <div class='timeleft'>{{timeLeft}}</div>
+      <button {{action "startCountdown"}}>Start</button>
+    </script>
+
+    <script type="text/x-handlebars" data-template-name="quote">
+      <p>{{body}}</p>
+    </script>
+
+     <script type="text/x-handlebars" data-template-name="result">
+      <p>{{elapsedTime}} sec</p>
+      <p>{{result}} wpm</p>
+    </script>
+
+
+    <script type="text/x-handlebars" data-template-name="game">
+      {{#if showQuote}}
+         {{partial "quote"}}
+      {{else}}
+         {{partial "countdown"}}
+      {{/if}}
+
+      {{#if showResult}}
+        {{partial "result"}}
+      {{else}}
+        {{input valueBinding="input" class=isValid action="advance"}}
+      {{/if}}
+
+    </script>
+
+
+
+    <script src="js/libs/jquery-1.10.2.min.js"></script>
+    <script src="js/libs/handlebars-1.0.0.js"></script>
+    <script src="js/libs/ember.js"></script>
+    <script src="js/libs/ember-data.js"></script>
+
+    <script src="js/application.js"></script>
+    <script src="js/models/timer.js"></script>
+    <script src="js/router.js"></script>
+    <script src="js/models/quote.js"></script>
+    <script src="js/controllers/game_controller.js"></script>
+    <script src="js/views/game_view.js"></script>
+    <script src="js/views/countdown_view.js"></script>
+    <script src="js/views/quote_view.js"></script>
+  </body>
+</html>
