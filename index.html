@@ -8,6 +8,13 @@
   <body>
 
 
+    <script type="text/x-handlebars" data-template-name="application">
+      <div id="container">
+         {{outlet}}
+      </div>
+    </script>
+
+
     <script type="text/x-handlebars" data-template-name="countdown">
       <div class='timeleft'>{{timeLeft}}</div>
       <button {{action "startCountdown"}}>Start</button>
@@ -33,9 +40,8 @@
       {{#if showResult}}
         {{partial "result"}}
       {{else}}
-        {{input valueBinding="input" class=isValid action="advance"}}
+        {{input valueBinding="input" class=isValid}}
       {{/if}}
-
     </script>
 
 
@@ -51,7 +57,5 @@
     <script src="js/models/timer.js"></script>
     <script src="js/controllers/game_controller.js"></script>
     <script src="js/views/game_view.js"></script>
-    <script src="js/views/countdown_view.js"></script>
-    <script src="js/views/quote_view.js"></script>
   </body>
 </html>

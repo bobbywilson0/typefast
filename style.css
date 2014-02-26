@@ -1,0 +1,15 @@
+body {
+  font-size: 24px;
+  line-height: 36px;
+}
+
+#container {
+  width: 600px;
+  margin: 0 auto;
+}
+
+input {
+  display: block;
+  font-size: 16px;
+  width: 400px;
+}

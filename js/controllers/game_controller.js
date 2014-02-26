@@ -18,7 +18,8 @@ TypeFast.GameController = Ember.ObjectController.extend({
       this.set('currentIndex', this.get('currentIndex') + 1);
       if (this.get('currentIndex') === this.get('words').length) {
         this.get('timer').stopStopwatch();
-        this.set('result', this.get('words').length / (this.get('timer').elapsedTime / 60));
+        var wordUnits = this.get('body').length / 5;
+        this.set('result', wordUnits / (this.get('timer').elapsedTime / 60));
       }
       this.set('input', '');
       return true;
