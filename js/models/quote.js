@@ -5,7 +5,13 @@ TypeFast.Quote = DS.Model.extend({
 TypeFast.Quote.FIXTURES = [
   {
     id: 1,
-    body: "The aim of art is to represent not the outward appearance of things, but their inward significance."
+    body: ["In the city of New York the summer of 1899 was signalized by the",
+    "dismantling of the Elevated Railroads. The summer of 1900 will live in",
+    "the memories of New York people for many a cycle; the Dodge Statue was",
+    "removed in that year. In the following winter began that agitation for",
+    "the repeal of the laws prohibiting suicide which bore its final fruit in",
+    "the month of April, 1920, when the first Government Lethal Chamber was",
+    "opened on Washington Square."].join(" ")
   },
   {
     id: 2,
