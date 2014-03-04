@@ -38,10 +38,11 @@
 
     <script type="text/x-handlebars" data-template-name="game">
       {{#if showQuote}}
-         {{partial "quote"}}
-         {{focus-input valueBinding="input" class=isValid}}
+        {{partial "quote"}}
+        {{focus-input valueBinding="input" class=isValid}}
+        {{view "progress" id="progress"}}
       {{else}}
-         {{partial "countdown"}}
+        {{partial "countdown"}}
       {{/if}}
 
       {{#if showResult}}
@@ -62,6 +63,7 @@
     <script src="js/models/timer.js"></script>
     <script src="js/controllers/game_controller.js"></script>
     <script src="js/views/game_view.js"></script>
+    <script src="js/views/progress_view.js"></script>
     <script src="js/views/word_view.js"></script>
     <script src="js/components/focus_component.js"></script>
   </body>

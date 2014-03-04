@@ -17,3 +17,9 @@ input {
 .is-highlighted {
   background-color: #ff9;
 }
+
+#progress {
+  width: 0;
+  background-color: #f00;
+  height: 10px;
+}

@@ -28,6 +28,9 @@ TypeFast.GameController = Ember.ObjectController.extend({
     }
   }.property('input', 'currentWord'),
   timeLeftBinding: 'timer.timeLeft',
+  progress: function() {
+    return (this.get('currentIndex') / this.get('words').length) * 100;
+  }.property('currentIndex'),
   resultBinding: 'result',
   elapsedTime: function() { return this.get('timer.elapsedTime')}.property('elapsedTime'),
   showResult: Em.computed.alias('timer.raceComplete'),
