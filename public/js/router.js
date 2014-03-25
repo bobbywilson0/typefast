@@ -4,7 +4,7 @@ TypeFast.Router.map(function() {
 
 TypeFast.GameRoute = Ember.Route.extend({
   actions: {
-    startCountdown: function() {
+    startGame: function() {
       this.get('timer').start();
     }
   },
