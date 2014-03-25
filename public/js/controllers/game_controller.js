@@ -1,8 +1,5 @@
 TypeFast.GameController = Ember.ObjectController.extend({
   timer: null,
-  initTimer: function() {
-    this.set('timer', TypeFast.Timer.create());
-  }.on('init'),
   input: '',
   currentIndex: 0,
   words: function() {
@@ -27,11 +24,15 @@ TypeFast.GameController = Ember.ObjectController.extend({
       return false;
     }
   }.property('input', 'currentWord'),
-  timeLeftBinding: 'timer.timeLeft',
+  timeLeft: function() {
+    return this.get('timer').timeLeft;
+  }.property('timer.timeLeft'),
   progress: function() {
     return (this.get('currentIndex') / this.get('words').length) * 100;
   }.property('currentIndex'),
-  resultBinding: 'result',
+  result: function() {
+    return this.get('result');
+  }.property('result'),
   elapsedTime: function() { return this.get('timer.elapsedTime')}.property('elapsedTime'),
   showResult: Em.computed.alias('timer.raceComplete'),
   showQuote: Em.computed.alias('timer.countdownComplete'),
