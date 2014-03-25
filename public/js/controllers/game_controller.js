@@ -1,9 +1,4 @@
 TypeFast.GameController = Ember.ObjectController.extend({
-  actions: {
-    startCountdown: function() {
-      this.get('timer').start();
-    }
-  },
   showResult: Em.computed.alias('timer.raceComplete'),
   showQuote: Em.computed.alias('timer.countdownComplete'),
   timer: null,
