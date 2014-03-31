@@ -1,0 +1,9 @@
+<p>
+  {{#each words}}
+    {{#view "word"}}
+       {{this}}
+    {{/view}}
+  {{/each}}
+</p>
+
+{{tl-focus-input valueBinding="input"}}
