@@ -1,4 +1,4 @@
-export default Ember.TextField.extend({
+export default Em.TextField.extend({
   becomeFocused: function() {
     this.$().focus();
   }.on('didInsertElement')

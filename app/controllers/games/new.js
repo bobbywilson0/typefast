@@ -1,4 +1,6 @@
-export default Em.ObjectController.extend({
+import ApplicationController from '../application-controller';
+
+export default ApplicationController.extend({
 
   game: function() {
     return this.store.createRecord('game', {
@@ -17,11 +19,12 @@ export default Em.ObjectController.extend({
       var self = this;
 
       game.set('wpm', wpm);
+      game.set('userId', '');
       game.save().then(function() {
         self.transitionToRoute('games.show', game);
-      })
+      });
     }
 
   }
-})
+});
 

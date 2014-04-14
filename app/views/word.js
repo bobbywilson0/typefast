@@ -1,11 +1,11 @@
-export default Ember.View.extend({
+export default Em.View.extend({
   wordIndex: Em.computed.alias('_parentView.contentIndex'),
-  tagName: "span",
+  tagName: 'span',
   classNameBindings: ['isHighlighted'],
   isHighlighted: function() {
     if(this.get('parentView.currentIndex') === this.get('wordIndex')) {
       return true;
     }
   }.property('parentView.currentIndex')
-})
+});
 

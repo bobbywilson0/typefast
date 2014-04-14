@@ -1,4 +1,4 @@
-export default Ember.Component.extend({
+export default Em.Component.extend({
   init: function() {
     this.set('startedAt', new Date());
     this._super();
@@ -19,7 +19,7 @@ export default Ember.Component.extend({
 
   isValid: function() {
     if (this.get('input').trim() === this.get('currentWord') &&
-        this.get('input').trim() != '') {
+        this.get('input').trim() !== '') {
       return true;
     } else {
       return false;
@@ -50,9 +50,9 @@ export default Ember.Component.extend({
   }.property(),
 
   keyDown: function(e) {
-    if(this.get('input').trim() == '' && e.keyCode === 32) {
+    if(this.get('input').trim() === '' && e.keyCode === 32) {
       e.preventDefault();
     }
   }
 
-})
+});

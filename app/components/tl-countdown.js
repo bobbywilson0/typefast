@@ -1,12 +1,12 @@
-export default Ember.Component.extend({
+export default Em.Component.extend({
   className: 'tl-countdown',
   isCompleted: false,
 
   showHideButton: function() {
     if (this.get('startedAt') === undefined) {
-      return "display: block";
+      return 'display: block';
     } else {
-      return "display: none";
+      return 'display: none';
     }
   }.property('startedAt'),
 

@@ -66,11 +66,13 @@ module.exports = function (broccoli) {
       'type-fast/config/environment.js',
       'type-fast/config/environments/' + env + '.js',
       'jquery.js',
+      'jquery.cookie.js',
       'handlebars.js',
       'ember.js',
       'ic-ajax/main.js',
       'ember-data.js',
-      'ember-resolver.js'
+      'ember-resolver.js',
+      'localstorage_adapter.js'
     ],
 
     wrapInEval: env !== 'production',

@@ -1,4 +1,4 @@
-var IndexRoute = Ember.Route.extend({
+var IndexRoute = Em.Route.extend({
   beforeModel: function() {
     this.transitionTo('games.new');
   }
